@@ -1,0 +1,60 @@
+.home-page {
+    font-family: 'Open Sans', sans-serif;
+
+}
+.banner {
+    background-color: #AB2A19;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    color: white;
+    box-sizing: border-box;
+
+}
+.banner-content {
+    padding-right: 300px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+    
+}
+.shelves-header-logo {
+    height: 40px;
+    width: 40px;
+}
+.banner span {
+    margin-left: 7px;
+    font-size: 2.1rem;
+
+}
+.shelf-container {
+    display: flex;
+    flex-direction: column;
+}
+.shelf {
+    width: 500px;
+    height: 65px;
+    background-color: #D34735;
+    color: white;
+    margin-top: 20px;
+    border-radius: 4px;
+    display: flex;
+    padding-left: 20%;
+    align-items: center;
+    box-sizing: border-box;
+}
+.shelf span {
+    font-size: 1.8rem
+}
+
+.single-shelf {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a {
+    text-decoration: none;
+}

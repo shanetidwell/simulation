@@ -1,0 +1,19 @@
+.bin {
+    width: 500px;
+    height: 65px;
+    margin-top: 20px;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.9rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inventory-in-bin {
+    background-color: #ED6B5A
+
+}
+.add-inventory {
+    background-color: #FFB8AF
+}
