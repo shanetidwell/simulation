@@ -11,6 +11,7 @@ export default class Bins extends Component {
     }
     componentDidMount = () =>{
         console.log(this.props.itemName)
+        console.log(999999, this.props)
     }
     
     
@@ -24,7 +25,7 @@ export default class Bins extends Component {
                     </div>
                 ):(
                     <div className="inventory-in-bin bin">
-                        <span>{`Bin`}</span>
+                        <span>{`Bin ${this.props.bin_name[1]}`}</span>
                     </div>
                 )
 

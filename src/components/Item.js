@@ -29,7 +29,8 @@ export default class Shelf extends Component {
             console.log("props", this.props)
             console.log(response.data)
             this.setState({item: response.data[0], inputName: response.data[0].item_name, inputPrice: response.data[0].item_price,
-                shelfName: response.data[0].shelf_name, binNumber: response.data[0].bin_name[1]});                     
+                shelfName: response.data[0].shelf_name, binNumber: response.data[0].bin_name[1]});   
+            console.log("Edit", this.state.edit)                  
         }).catch(e=>console.log(e))
     }
 
@@ -41,6 +42,7 @@ export default class Shelf extends Component {
     }
     editClick = () =>{
         this.setState({edit: true});
+        console.log("edittt", this.state.edit);
     }
     saveClick = () => {
         axios({
@@ -86,11 +88,16 @@ export default class Shelf extends Component {
                 <div className="item-content">
                     <div className="box-title">Name</div>
                     
+                    {!this.state.edit?(
+                    <input type="text" value={this.state.inputName} onChange={(e)=>this.handleChangeName(e.target.value)} readOnly></input>):(
                     <input type="text" value={this.state.inputName} onChange={(e)=>this.handleChangeName(e.target.value)}></input>
+                    )}
                     
                     <div className="box-title">Price</div>
-                    
-                    <input type="text" value={this.state.inputPrice} onChange={(e)=>this.handleChangePrice(e.target.value)}></input>
+
+                    {!this.state.edit?(
+                    <input type="text" value={this.state.inputPrice} onChange={(e)=>this.handleChangePrice(e.target.value)} readOnly></input>):(
+                    <input type="text" value={this.state.inputPrice} onChange={(e)=>this.handleChangePrice(e.target.value)} ></input>)}
                    
                     <div className="button-container">
                         {!this.state.edit ?(
